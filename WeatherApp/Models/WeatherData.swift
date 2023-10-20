@@ -66,7 +66,7 @@ struct WeatherData: Codable {
     
     struct Minutely: Codable {
         let dt: Date?
-        let precipitation: Int?
+        let precipitation: Double?
     }
     
     struct Hourly: Codable {

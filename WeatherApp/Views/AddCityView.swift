@@ -5,9 +5,16 @@ struct AddCityView: View {
     
     var body: some View {
         VStack {
-            TextField("New City", text: $model.newCityName)
+            Text("Weather app")
+                .font(.title)
+                .multilineTextAlignment(.center)
+                .fontWeight(.semibold)
+            
+        TextField("New City", text: $model.newCityName)
             
             Button("Add City", action: model.addCity)
+                .foregroundColor(.black)
+                .font(Font.body.bold())
         }
         .padding()
         .padding(.vertical, 8)

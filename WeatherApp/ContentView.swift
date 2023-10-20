@@ -15,8 +15,8 @@ struct ContentView: View {
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
             .navigationBarHidden(true)
             .background(
-                Color.purple
-                    .opacity(0.1)
+                Color(red: 89/255, green: 77/255, blue: 180/255)
+                    .opacity(0.5)
                     .ignoresSafeArea()
             )
         }

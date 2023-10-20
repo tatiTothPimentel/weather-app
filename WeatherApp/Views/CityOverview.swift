@@ -48,7 +48,8 @@ struct CityOverview: View {
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 40)
-                .fill(Color.purple)
+                .fill(Color(red: 89/255, green: 77/255, blue: 180/255)
+)
         )
         .overlay(
             Text(model.date)
@@ -65,10 +66,10 @@ struct CityOverview: View {
     }
     private var informationBox: some View {
         HStack(spacing: 16) {
-            ValueDescriptionStack(icon: "cloud", boldText: $model.feelsLike, description: "Feels Like")
-            ValueDescriptionStack(icon: "cloud", boldText: $model.humidity, description: "Humidity")
-            ValueDescriptionStack(icon: "cloud", boldText: $model.pressure, description: "Pressure")
-            ValueDescriptionStack(icon: "cloud", boldText: $model.windSpeed, description: "Windspeed")
+            ValueDescriptionStack(icon: "thermometer.sun.fill", boldText: $model.feelsLike, description: "Feels Like")
+            ValueDescriptionStack(icon: "drop.fill", boldText: $model.humidity, description: "Humidity")
+            ValueDescriptionStack(icon: "barometer", boldText: $model.pressure, description: "Pressure")
+            ValueDescriptionStack(icon: "wind", boldText: $model.windSpeed, description: "Windspeed")
         }
         .padding()
         .padding(.vertical, 8)
@@ -104,9 +105,9 @@ struct CityOverview: View {
                     
                     if model.weatherData != nil {
                         ForEach(model.weatherData?.hourly ?? [], id: \.dt) { forecast in
-                            let url =         URL(string: "https://openweathermap.org/img/wn/\(forecast.weather?.first?.icon ?? "10d")@2x.png")!
+                            let url = URL(string: "https://openweathermap.org/img/wn/\(forecast.weather?.first?.icon ?? "10d")@2x.png")!
 
-                            HourtyBox(time: model.timeFormatter.string(from: forecast.dt ?? Date()), icon: url, temp: "\(forecast.temp ?? 0.0)º")
+                            HourtyBox(time: model.timeFormatter.string(from: forecast.dt ?? Date()), icon: url, temp: "\(String(format: "%.1f", forecast.temp ?? 0.0))º")
                         }
                     }
                 }

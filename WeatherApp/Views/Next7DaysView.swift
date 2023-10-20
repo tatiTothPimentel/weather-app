@@ -24,7 +24,10 @@ struct Next7DaysView: View {
             
             VStack(spacing: 16) {
                 ForEach(forecasts, id: \.dt) { forecast in
-                    DailyForecastView(date: dateFormatter.string(from: forecast.dt ?? Date()), icon: forecast.weather?.first?.icon ?? "10d", high: "\(forecast.temp?.max ?? 0.0)º", low: "\(forecast.temp?.min ?? 0.0)º")
+                    let maxTemperature = String(format: "%.1f", forecast.temp?.max ?? 0.0)
+                    let minTemperature = String(format: "%.1f", forecast.temp?.min ?? 0.0)
+                    
+                    DailyForecastView(date: dateFormatter.string(from: forecast.dt ?? Date()), icon: forecast.weather?.first?.icon ?? "10d", high: "\(maxTemperature)º", low: "\(minTemperature)º")
                 }
             }
             .padding()
@@ -32,7 +35,7 @@ struct Next7DaysView: View {
             .frame(maxWidth: .infinity)
             .background(
                 RoundedRectangle(cornerRadius: 40)
-                    .fill(Color.white)
+                    .fill(Color(red: 89/255, green: 77/255, blue: 180/255))
             )
             .padding(.horizontal, 10)
             
@@ -40,8 +43,8 @@ struct Next7DaysView: View {
         }
         .navigationBarHidden(true)
         .background(
-            Color.purple
-                .opacity(0.2)
+            Color(red: 89/255, green: 77/255, blue: 180/255)
+                .opacity(0.5)
                 .ignoresSafeArea()
         )
     }

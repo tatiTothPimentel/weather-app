@@ -23,7 +23,7 @@ struct HourtyBox: View {
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 40)
-                .fill(Color.purple)
+                .fill(Color(red: 89/255, green: 77/255, blue: 180/255))
         )
     }
 }

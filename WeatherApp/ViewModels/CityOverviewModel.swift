@@ -54,7 +54,7 @@ final class CityOverviewModel: ObservableObject {
                     self?.weatherData = weatherData
                     let icon = weatherData.current?.weather?.first?.icon ?? "10d"
                     self?.iconURL = URL(string: "https://openweathermap.org/img/wn/\(icon)@2x.png")!
-                    self?.temp = "\(weatherData.current?.temp ?? 0.0)º"
+                    self?.temp = "\(String(format: "%.1f", weatherData.current?.temp ?? 0.0))º"
                     self?.description = "\(weatherData.current?.weather?.first?.description ?? "")"
                     self?.feelsLike = "\(weatherData.current?.feelsLike ?? 0.0)º"
                     self?.pressure = "\(weatherData.current?.pressure ?? 0)"
