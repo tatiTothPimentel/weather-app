@@ -1,4 +1,3 @@
-//
 import SwiftUI
 
 struct ContentView: View {
@@ -16,7 +15,7 @@ struct ContentView: View {
             .navigationBarHidden(true)
             .background(
                 Color(red: 89/255, green: 77/255, blue: 180/255)
-                    .opacity(0.5)
+                    .opacity(0.1)
                     .ignoresSafeArea()
             )
         }
