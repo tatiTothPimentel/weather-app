@@ -23,8 +23,10 @@ Este é o meu primeiro aplicativo SwiftUI de previsão do tempo, que permite aco
 Para executar este projeto em sua máquina, siga estas etapas:
 
 1. Clone este repositório:
-
+   
+```ruby
 git clone https://github.com/tatiTothPimentel/weather-app.git
+```
 
 2. Abra o projeto no Xcode.
 
