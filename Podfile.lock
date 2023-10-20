@@ -1,0 +1,25 @@
+PODS:
+  - MyModule (0.1.0):
+    - MyModule/Release (= 0.1.0)
+  - MyModule/Release (0.1.0)
+
+DEPENDENCIES:
+  - MyModule (from `https://github.com/tatiTothPimentel/my-module.git`)
+
+EXTERNAL SOURCES:
+  MyModule:
+    :git: https://github.com/tatiTothPimentel/my-module.git
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  MyModule:
+    :commit: d3884d3a42542d2f92a62d2771de28f76ce413fc
+    :git: https://github.com/tatiTothPimentel/my-module.git
+    :submodules: true
+
+SPEC CHECKSUMS:
+  MyModule: d4288e5da665f1f24e199125e96012ccc54b0c58
+
+PODFILE CHECKSUM: 71f6411134c953207592fa343b36d2650a171de1
+
+COCOAPODS: 1.13.0

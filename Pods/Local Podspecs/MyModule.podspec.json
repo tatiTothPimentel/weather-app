@@ -1,0 +1,31 @@
+{
+  "name": "MyModule",
+  "version": "0.1.0",
+  "summary": "A short description of MyModule.",
+  "description": "Feature para criação de Gráficos",
+  "homepage": "https://github.com/tatiTothPimentel/MyModule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "tatiTothPimentel": "tatiane.toth@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/tatiTothPimentel/MyModule.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "MyModule/Classes/**/*",
+  "default_subspecs": "Release",
+  "subspecs": [
+    {
+      "name": "Release",
+      "vendored_frameworks": "Framework/MyModule.framework"
+    }
+  ],
+  "swift_version": "5.0"
+}

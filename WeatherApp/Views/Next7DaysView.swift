@@ -1,4 +1,5 @@
 import SwiftUI
+import MyModule
 
 struct Next7DaysView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -18,6 +19,7 @@ struct Next7DaysView: View {
             Text(name)
                 .font(.title)
                 .fontWeight(.semibold)
+                .dump()
             
             Spacer()
                 .frame(height: 50)
@@ -63,5 +65,12 @@ struct Next7DaysView: View {
             Spacer()
         }
         .padding()
+    }
+}
+
+extension View {
+    func dump() -> Self {
+        MainView.showMessage()
+        return self
     }
 }
